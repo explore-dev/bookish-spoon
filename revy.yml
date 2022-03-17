@@ -20,12 +20,16 @@ rules:
     kind: patch
     description: Maintainers can freely change the README
     spec: $hasFileName("README.md") && $isMemberOf($name(), $group("maintainers"))
+  
+  tautology:
+    kind: patch
+    description: Always 
+    spec: true
 
 protectionGates:
   ask:
     description: Ask mode
     patchRules:
-      - rule: changesRevyFile
       - rule: changesGitHubFiles
     actions:
       - $addLabel("critical")
@@ -34,6 +38,7 @@ protectionGates:
   ship:
     description: Ship mode
     patchRules:
+      - rule: tautology
       - rule: changesReadmeFile
     actions:
       - $addLabel("ship")
