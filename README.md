@@ -2,7 +2,7 @@
 Generate markdown files from comments in Go source files
 
 License
--------
+
 
 Copyright 2019-2022 Explore.dev Unipessoal Lda.
 
