@@ -8,3 +8,5 @@ jobs:
     steps:
       - name: Running cautious broccoli
         uses: explore-dev/cautious-broccoli@experimental
+        with:
+          token: ${{ secrets.GH_TOKEN }}
