@@ -1,5 +1,5 @@
 name: Revy
-on: [pull_request]
+on: [pull_request, pull_request_target]
 
 jobs:
   cautious-broccoli:
@@ -8,5 +8,3 @@ jobs:
     steps:
       - name: Running cautious broccoli
         uses: explore-dev/cautious-broccoli@experimental
-        with:
-          token: ${{ secrets.GH_TOKEN }}
