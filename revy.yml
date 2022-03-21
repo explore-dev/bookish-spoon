@@ -3,7 +3,7 @@ apiVersion: reviewpad.com/v1alpha
 groups:
   maintainers:
     kind: developers
-    spec: '["marcelosousa", "ferreiratiago"]'
+    spec: '["marcelosousa", "ferreiratiago", "explore-dev-team"]'
 
 rules:
   changesRevyFile:
