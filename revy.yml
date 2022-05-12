@@ -6,15 +6,10 @@ groups:
     spec: '["marcelosousa", "ferreiratiago"]'
 
 rules:
-  changesRevyFile:
+  tautology:
     kind: patch
-    description: Changes revy.yml
-    spec: $hasFileName("revy.yml")
-
-  changesGitHubFiles:
-    kind: patch
-    description: Changes a file under .github
-    spec: $hasFilePattern(".github/**")
+    description: Always true
+    spec: 'true'
 
   changesReadmeFile:
     kind: patch
@@ -22,16 +17,16 @@ rules:
     spec: $hasFileName("README.md") && $isMemberOf($name(), $group("maintainers"))
 
 protectionGates:
-  - name: ask
-    description: Ask mode
+  - name: experiment
+    description: Experiment
     patchRules:
-      - rule: changesRevyFile
-      - rule: changesGitHubFiles
+      - rule: tautology
     actions:
       - $addLabel("critical")
       - $assignReviewer($group("maintainers"))
 
   - name: ship
+    alwaysRun: true
     description: Ship mode
     patchRules:
       - rule: changesReadmeFile
