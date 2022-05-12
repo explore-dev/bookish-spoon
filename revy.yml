@@ -23,7 +23,7 @@ protectionGates:
       - rule: tautology
     actions:
       - $addLabel("critical")
-      - $assignReviewer($group("maintainers"))
+      - $assignReviewer(["marcelosousa", "ferreiratiago"])
 
   - name: ship
     alwaysRun: true
