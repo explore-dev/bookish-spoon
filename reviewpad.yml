@@ -25,3 +25,5 @@ workflows:
     then:
       - $addLabel("critical")
       - $assignReviewer($group("maintainers"), 1)
+      - $merge()
+
