@@ -1,20 +1,16 @@
 name: Revy
 on:
   - pull_request
+  - pull_request_target
 
 jobs:
   reviewpad-action:
     name: Reviewpad action
     runs-on: ubuntu-latest
-    # permissions:
-    #   contents: write
-    #   pull-requests: write
-    #   issues: write
-    #   repository-projects: write
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
-      - name: Dump GitHub context
-        id: github_context_step
-        run: echo '${{ toJSON(github) }}'
       - name: Runs reviewpad action
         uses: reviewpad/action@v2.x
 
