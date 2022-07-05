@@ -1,12 +1,16 @@
 name: Revy
-on: 
+on:
   - pull_request
-  - pull_request_target
 
 jobs:
   reviewpad-action:
     name: Reviewpad action
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - name: Runs reviewpad action
         uses: reviewpad/action@v2.x
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
