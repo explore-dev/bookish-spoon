@@ -17,6 +17,4 @@ jobs:
         run: echo '${{ toJSON(github) }}'
       - name: Runs reviewpad action
         uses: reviewpad/action@v2.x
-        with:
-          token: ${{ secrets.REVIEWPAD_ACTION }}
 
