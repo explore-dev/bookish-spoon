@@ -1,8 +1,4 @@
 # bookish-spoon
 
-Experiment with Revy on public repositories and forks.
-
-<!-- Needs to be improved -->
-
-# Comment
+Experiment with Reviewpad on public repositories and forks.
 
