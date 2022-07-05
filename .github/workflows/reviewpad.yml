@@ -12,6 +12,9 @@ jobs:
       issues: write
       repository-projects: write
     steps:
+      - name: Dump GitHub context
+        id: github_context_step
+        run: echo '${{ toJSON(github) }}'
       - name: Runs reviewpad action
         uses: reviewpad/action@v2.x
         with:
