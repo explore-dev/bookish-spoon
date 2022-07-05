@@ -12,3 +12,5 @@ jobs:
     steps:
       - name: Runs reviewpad action
         uses: reviewpad/action@v2.x
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
