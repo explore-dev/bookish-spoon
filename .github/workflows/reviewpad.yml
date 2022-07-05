@@ -11,5 +11,5 @@ jobs:
       pull-requests: write
     steps:
       - name: Runs reviewpad action
-        uses: reviewpad/action@v2.x
+        uses: reviewpad/action@canary
 
